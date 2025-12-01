@@ -62,6 +62,7 @@ LANG = {
         "messages": "条",
         "commands": "命令",
         "lang_switched": "已切换为中文",
+        "paste_tip": "提示: 粘贴多行请先合并为一行",
     },
     "en": {
         "title": "DeepSeek V3.2-Speciale",
@@ -91,6 +92,7 @@ LANG = {
         "messages": "msgs",
         "commands": "Commands",
         "lang_switched": "Switched to English",
+        "paste_tip": "Tip: Merge multi-line text before pasting",
     }
 }
 
@@ -249,6 +251,7 @@ def main():
     p(f"  {t('new_created') if is_new else t('loaded').format(n=len(msgs))}", Colors.GREEN)
     p("=" * 50, Colors.CYAN)
     p(f"  {t('help_hint')}", Colors.DIM)
+    p(f"  {t('paste_tip')}", Colors.YELLOW)
     print()
 
     client = OpenAI(api_key=config["api_key"], base_url=BASE_URL)
