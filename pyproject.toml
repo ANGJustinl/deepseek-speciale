@@ -14,3 +14,7 @@ dependencies = [
 
 [project.scripts]
 deepseek-speciale = "deepseek_speciale:main"
+
+
+[tool.setuptools]
+py-modules = ["deepseek_speciale"]
